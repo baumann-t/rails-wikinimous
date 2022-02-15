@@ -11,10 +11,11 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-light bg-light d-flex align-items-center mb-3">
-    <a class="navbar-brand p-3 m-0 " href="/articles">
+    <nav class="navbar navbar-light bg-light d-flex align-items-center mb-4 p-4">
+    <a class="navbar-brand mx-3 my-0 h1" href="/articles">
       WIKINIMIOUS
     </a>
+    <button type="button" class="btn btn-secondary mx-3"><%= link_to "CREATE ARTICLE", new_article_path()%></button>
   </nav>
     <%= yield %>
   </body>

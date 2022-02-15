@@ -1,7 +1,12 @@
-<h3><%= link_to "CREATE ARTICLE", new_article_path()%></h3>
-
-<% @articles.each do |article| %>
-  <h1><%= article.title %></h1>
-  <p><%= article.content %></p>
-  <%= link_to "VIEW MORE", article_path(article)%>
-<% end %>
+<div class="mx-auto container" style="width: 800px;">
+  <% @articles.each do |article| %>
+    <div>
+      <a href="/articles/<%=article.id%>" style="text-decoration:none">
+        <div class="d-flex justify-content-between bg-secondary my-3">
+          <p class="p-3 m-0 text-white"><%= article.title%></p>
+          <p class="p-3 m-0 text-white">+</p>
+        </div>
+      </a>
+    </div>
+  <% end %>
+</div>
